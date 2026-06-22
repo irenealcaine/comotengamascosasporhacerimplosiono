@@ -74,6 +74,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
+  align-items: start;
   min-height: 100px;
   padding: 4px;
   transition: background 0.15s;
@@ -97,7 +98,7 @@
   cursor: grab;
   rotate: -1deg;
   height: auto;
-  min-height: 140px;
+  min-height: 160px;
   position: relative;
 }
 
