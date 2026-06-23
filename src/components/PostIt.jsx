@@ -11,11 +11,9 @@ export default function PostIt({
   onAddSubtask,
   onUpdateSubtask,
   onDeleteSubtask,
-  colors,
 }) {
   const [editing, setEditing] = useState(false)
   const [title, setTitle] = useState(task.title)
-  const [showColors, setShowColors] = useState(false)
 
   function handleTitleBlur() {
     setEditing(false)
@@ -70,13 +68,6 @@ export default function PostIt({
             )}
             <div className="postit-actions">
               <button
-                className="btn-color"
-                onClick={() => setShowColors(!showColors)}
-                title="Cambiar color"
-              >
-                🎨
-              </button>
-              <button
                 className="btn-delete"
                 onClick={() => onDelete(columnId, task.id)}
                 title="Eliminar tarea"
@@ -85,22 +76,6 @@ export default function PostIt({
               </button>
             </div>
           </div>
-
-          {showColors && (
-            <div className="color-picker">
-              {colors.map((c) => (
-                <button
-                  key={c}
-                  className={`color-swatch ${c === task.color ? "active" : ""}`}
-                  style={{ backgroundColor: c }}
-                  onClick={() => {
-                    onUpdate(columnId, task.id, { color: c })
-                    setShowColors(false)
-                  }}
-                />
-              ))}
-            </div>
-          )}
 
           <SubtaskList
             subtasks={task.subtasks}

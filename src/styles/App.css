@@ -1,7 +1,7 @@
 
 
 .app {
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -72,7 +72,7 @@
 
 .postit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
   align-items: start;
   min-height: 100px;
@@ -155,7 +155,6 @@
   flex-shrink: 0;
 }
 
-.btn-color,
 .btn-delete {
   width: 26px;
   height: 26px;
@@ -171,35 +170,8 @@
   line-height: 1;
 }
 
-.btn-color:hover,
 .btn-delete:hover {
   background: rgba(0, 0, 0, 0.18);
-}
-
-.color-picker {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.06);
-  border-radius: 6px;
-}
-
-.color-swatch {
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: border-color 0.15s;
-}
-
-.color-swatch:hover {
-  border-color: rgba(0, 0, 0, 0.3);
-}
-
-.color-swatch.active {
-  border-color: #333;
 }
 
 .subtask-list {

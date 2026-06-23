@@ -15,7 +15,6 @@ export default function App() {
     updateSubtask,
     deleteSubtask,
     moveTask,
-    COLORS,
   } = useTasks()
 
   function handleDragEnd(result) {
@@ -55,7 +54,6 @@ export default function App() {
               onAddSubtask={addSubtask}
               onUpdateSubtask={updateSubtask}
               onDeleteSubtask={deleteSubtask}
-              colors={COLORS}
             />
           ))}
         </main>

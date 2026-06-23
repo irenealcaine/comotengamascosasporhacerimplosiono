@@ -16,7 +16,6 @@ export default function Column({
   onAddSubtask,
   onUpdateSubtask,
   onDeleteSubtask,
-  colors,
 }) {
   return (
     <div className="column">
@@ -47,7 +46,6 @@ export default function Column({
                 onAddSubtask={onAddSubtask}
                 onUpdateSubtask={onUpdateSubtask}
                 onDeleteSubtask={onDeleteSubtask}
-                colors={colors}
               />
             ))}
             {provided.placeholder}
