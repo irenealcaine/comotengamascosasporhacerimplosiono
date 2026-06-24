@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FaRegCircleCheck } from "react-icons/fa6"
+import { FaRegCircle } from "react-icons/fa"
 
 export default function SubtaskList({
   subtasks,
@@ -53,14 +55,15 @@ function SubtaskItem({ subtask, columnId, taskId, onUpdate, onDelete }) {
 
   return (
     <div className="subtask">
-      <input
-        type="checkbox"
-        className="subtask-checkbox"
-        checked={subtask.done}
-        onChange={(e) =>
-          onUpdate(columnId, taskId, subtask.id, { done: e.target.checked })
+      <button
+        className={`subtask-checkbox${subtask.done ? " done" : ""}`}
+        onClick={() =>
+          onUpdate(columnId, taskId, subtask.id, { done: !subtask.done })
         }
-      />
+        title={subtask.done ? "Marcar como pendiente" : "Marcar como completada"}
+      >
+        {subtask.done ? <FaRegCircleCheck /> : <FaRegCircle />}
+      </button>
       {editing ? (
         <input
           className="subtask-input"

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Draggable } from "@hello-pangea/dnd"
 import SubtaskList from "./SubtaskList"
+import { GoPlusCircle } from "react-icons/go"
 
 export default function PostIt({
   task,
@@ -85,12 +86,14 @@ export default function PostIt({
             onUpdate={onUpdateSubtask}
             onDelete={onDeleteSubtask}
           />
-          <button
-            className="btn-add-subtask"
-            onClick={() => onAddSubtask(columnId, task.id)}
-          >
-            +
+          <div className="add-subtask-row">
+            <button
+              className="btn-add-subtask"
+              onClick={() => onAddSubtask(columnId, task.id)}
+            >
+            <GoPlusCircle />
           </button>
+          </div>
         </div>
       )}
     </Draggable>
