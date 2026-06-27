@@ -1,16 +1,88 @@
-# React + Vite
+# Como Tenga Mas Cosas Por Hacer Implosiono
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tablero de tareas estilo Kanban con post-its de colores. Organiza tus pendientes arrastrando y soltando entre columnas.
 
-Currently, two official plugins are available:
+## Descripcion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Una aplicacion de gestion de tareas con estetica de post-its de colores. Cada tarea es un post-it que puedes mover entre tres columnas segun su prioridad. Las tareas pueden tener subtareas con checkboxes para un seguimiento mas detallado.
 
-## React Compiler
+### Columnas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Para ya** - Tareas urgentes para hoy
+- **Para cuando se pueda** - Tareas pendientes sin fecha fija
+- **Aparcao** - Tareas archivadas o pausadas
 
-## Expanding the ESLint configuration
+## Caracteristicas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Tres columnas de organizacion
+- Post-its con colores aleatorios
+- Drag and drop para mover tareas entre columnas
+- Edicion inline de titulos de tareas
+- Subtareas con checkboxes
+- Colores aleatorios para cada post-it
+- Persistencia de datos en localStorage
+- Interfaz responsiva (movil, tablet, desktop)
+- Modo oscuro por defecto
+- Tipografia manuscrita (Caveat)
+
+## Stack tecnologico
+
+- React 19
+- Vite 8
+- JavaScript (ES6+)
+- CSS plain
+- @hello-pangea/dnd (drag and drop)
+- react-icons
+
+## Requisitos
+
+- Node.js >= 18
+- pnpm
+
+## Instalacion
+
+```bash
+git clone <url-del-repositorio>
+cd comotengamascosasporhacerimplosiono
+pnpm install
+```
+
+## Desarrollo
+
+```bash
+pnpm dev
+```
+
+## Build
+
+```bash
+pnpm build
+```
+
+## Vista previa del build
+
+```bash
+pnpm preview
+```
+
+## Lint
+
+```bash
+pnpm lint
+```
+
+## Estructura del proyecto
+
+```
+src/
+├── components/
+│   ├── Column.jsx       # Columna del tablero con area droppable
+│   ├── PostIt.jsx       # Post-it individual con edicion y drag
+│   └── SubtaskList.jsx  # Lista de subtareas con checkboxes
+├── hooks/
+│   └── useTasks.js      # Logica de estado y persistencia
+├── styles/
+│   └── App.css          # Estilos globales
+├── App.jsx
+└── main.jsx
+```
