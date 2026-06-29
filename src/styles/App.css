@@ -94,7 +94,7 @@
   flex-direction: column;
   transition: box-shadow 0.15s, transform 0.15s;
   cursor: grab;
-  rotate: -1deg;
+  rotate: -1.5deg;
   height: auto;
   min-height: 160px;
 }
@@ -104,7 +104,7 @@
 }
 
 .postit:nth-child(even) {
-  rotate: 0.5deg;
+  rotate: 1deg;
 }
 
 .postit:nth-child(3n) {
