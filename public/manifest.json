@@ -1,0 +1,21 @@
+{
+  "name": "Post-it Tasks",
+  "short_name": "PostIt",
+  "description": "Una aplicación para gestionar tus tareas con un toque divertido",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#facc15",
+  "icons": [
+    {
+      "src": "/post-it.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/post-it.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
